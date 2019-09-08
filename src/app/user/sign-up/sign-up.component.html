@@ -1,0 +1,66 @@
+<div *ngIf="error" class="alert alert-danger">{{error}}</div>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit" class="col s12 white">
+<div class="row">
+      <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input placeholder="firstname" type="text" formControlName="FirstName" class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" />
+          <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
+            <div *ngIf="f.FirstName.errors.required">First Name is required</div>
+        </div>
+       </div>
+
+    <div class="input-field col s6">
+      <i class="material-icons prefix">account_circle</i>
+      <input placeholder="Lastname" type="text" formControlName="LastName" class="form-control" 
+      [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" />
+      <div *ngIf="submitted && f.LastName.errors" class="invalid-feedback">
+          <div *ngIf="f.LastName.errors.required">Last Name is required</div>
+      </div>
+   </div>
+  </div>
+
+  <div class="row">
+      <div class="input-field col s12">
+      <i class="material-icons prefix">account_circle</i>
+        <input placeholder="company name" type="text"  formControlName="Companyname" class="form-control" 
+        [ngClass]="{ 'is-invalid': submitted && f.Companyname.errors }" /> 
+       </div>   
+  </div>
+
+  <div class="row">
+      <div class="input-field col s12">
+         <i class="material-icons prefix">email</i>
+          <input placeholder="Email" type="text" formControlName="Email" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        </div>
+   </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+       <i class="material-icons prefix">vpn_key</i>
+       <input placeholder="Password" type="password" formControlName="Password" class="form-control" 
+       [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" />
+       <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+           <div *ngIf="f.Password.errors.required">Password is required</div>
+           <div *ngIf="f.Password.errors.minlength">Password must be at least 6 characters</div>
+       </div>
+    </div>
+
+   <!---<div class="input-field col s6">
+      <i class="material-icons prefix">vpn_key</i>
+       <input class="validate" type="password" name="Password" required minlength="6">
+       <label >Confirm Password</label>
+   </div> -->
+  </div>
+  
+ 
+  <div class="row">
+    <div class="input-field col s12">
+      <button  class="btn btn-primary">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Register
+    </button>
+    </div>
+  </div>
+</form>

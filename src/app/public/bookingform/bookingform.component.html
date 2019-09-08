@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col s6  offset-s3">
+      <div class="card  grey lighten-3">
+        <div class="card-content valign center">
+          <span class="card-title">Book Ticket</span>
+      <form>
+      <div class="row">
+         <div class="input-field col s6">
+             <input class="validate" type="text" name="phone" required>
+             <label data-error="Invalid phone number!">Phone Number</label>
+         </div>
+         <div class="input-field col s6">
+             <input type="email" name="Email" >
+           <label>Email (Option) </label>
+        </div>
+       </div>
+       <div class="row">
+           <div class="input-field col s12">
+             <input type="text" name="BusName" required>
+               <label>  Passenger Full name</label>
+            </div>   
+       </div>
+       <div class="row">
+          <div class="input-field col s4">
+              <label for="male">Gender</label>
+          </div>
+
+         <div class="input-field col s4">
+           <input class="validate" type="radio" name="gender"  value="male" checked/>
+           <label for="male">Male</label>
+         </div>
+         
+           <div class="input-field col s4">
+              <input class="validate" type="radio" name="gender"  value="female" checked/>
+              <label for="female">Female</label>
+           </div>
+         </div>
+        
+       <div class="row">
+         <div class="input-field col s4">
+             <input class="validate" type="text" name="Initial" required>
+             <label >Initial</label>
+         </div>
+         <div class="input-field col s4">
+              <input class="validate" type="text" name="Destination" required >
+              <label >Destination</label>
+          </div>
+          <div class="input-field col s4">
+              <label >Choose a set</label>
+          </div>
+       </div>
+       <div class="card-action card-content valign center">
+          <a href="#">Payment</a>
+        </div> 
+      </form>
+     </div>
+       
+     </div>
+    </div>
+  </div>
+            
